@@ -1,5 +1,6 @@
 import requests
 import sys
+from datetime import date
 
 def PrintCityTemperature(city):
 
@@ -18,7 +19,11 @@ def PrintCityTemperature(city):
 
         raise Exception(data['error']['message'])
 
-    print(f"Current temperature in {city}: {data['current']['temp_c']}")
+    today = date.today()
+
+    formatted_date = today.strftime("%Y/%d/%m/")
+
+    print(f"Current temperature in {city} on {formatted_date}: {data['current']['temp_c']}C")
 
 
 if __name__ == "__main__":
