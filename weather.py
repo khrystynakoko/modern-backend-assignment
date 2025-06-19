@@ -23,7 +23,7 @@ def PrintCityTemperature(city):
 
     formatted_date = today.strftime("%Y/%d/%m/")
 
-    print(f"Current temperature in {city} on {formatted_date}: {data['current']['temp_c']}C")
+    print(f"Current temperature in {city} on {formatted_date}: {data['current']['temp_c']}°C")
 
 
 if __name__ == "__main__":
