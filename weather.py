@@ -18,7 +18,7 @@ def PrintCityTemperature(city):
 
         raise Exception(data['error']['message'])
 
-    print(data['current']['temp_c'])
+    print(city, data['current']['temp_c'])
 
 
 if __name__ == "__main__":
