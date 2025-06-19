@@ -1,7 +1,7 @@
 import requests
 import sys
 
-def PrintCityTemperature():
+def PrintCityTemperature(city):
 
     url = "http://api.weatherapi.com/v1/current.json"
     
@@ -27,6 +27,7 @@ if __name__ == "__main__":
         print("Usage: missing arguments")
         sys.exit(1)
 
-    city = sys.argv[1]
+    cityInput = sys.argv[1]
 
-    PrintCityTemperature()
+    PrintCityTemperature(cityInput)
+    
